@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Exclusiva</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f5f5f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+    .login-container, .live-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 400px;
+      position: relative;
+    }
+    .login-container input {
+      display: block;
+      margin: 1rem 0;
+      padding: 0.5rem;
+      width: 100%;
+    }
+    .login-container button {
+      padding: 0.5rem;
+      background: #0066cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <div class="login-container" id="loginBox">
+    <h2>Acesso à Live</h2>
+    <input type="text" id="username" placeholder="Usuário">
+    <input type="password" id="password" placeholder="Senha">
+    <button onclick="login()">Entrar</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+
+  <div class="live-container" id="liveBox" style="display:none">
+    <h2>Transmissão ao Vivo</h2>
+    <video id="liveVideo" controls autoplay></video>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
